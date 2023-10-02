@@ -3,7 +3,7 @@ import Head from "../../../sisipan/head.astro";
 import data from "../../../wiki/belajar-excel/tiddlers/published.json";
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <Head />
@@ -12,18 +12,13 @@ import data from "../../../wiki/belajar-excel/tiddlers/published.json";
     <title>Belajar Excel</title>
   </head>
   <body>
-    <div class="p-3">
-      <h1>Belajar Excel</h1>
-      <div class="grid grid-cols-10 gap-3">
-        <div class="col-span-2">
-          {
-            data
-              .sort((a, b) => (a.title > b.title ? 1 : -1))
-              .map((x) => <a>{x.title}</a>)
-          }
-        </div>
-        <div class="col-span-8"></div>
-      </div>
+    <div class="p-10">
+      <h1 class="text-6xl font-bold leading-[1.5] mb-5">Belajar Excel</h1>
+      {
+        data
+          .sort((a, b) => (a.title > b.title ? 1 : -1))
+          .map((x) => <a class="btn mr-3 mb-3">{x.title}</a>)
+      }
     </div>
   </body>
 </html>
