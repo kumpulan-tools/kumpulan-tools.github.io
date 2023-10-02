@@ -1,14 +1,21 @@
 ---
 import Adsense from "../sisipan/adsense.astro";
+import Head from "../sisipan/head.astro";
+
+let aplikasi = [
+  {
+    nama: "Penanda Halaman",
+    slug: "penanda-halaman",
+  },
+];
 ---
 
 <html lang="en">
   <head>
-    <Adsense />
+    <Head></Head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+    
     <title>Kumpulan Tools</title>
   </head>
   <body>
@@ -21,6 +28,18 @@ import Adsense from "../sisipan/adsense.astro";
             Terutama, kalau kamu menginstalnya dari Webstore.
           </p>
         </div>
+      </div>
+    </div>
+    <div class="p-7">
+      <h2 class="text-3xl font-bold">Aplikasi yang Kubuat</h2>
+      <div class="grid mt-6 grid-cols-4 gap-4">
+        {
+          aplikasi.map((x) => (
+            <a class="btn normal-case" href={`/aplikasi/${x.slug}`}>
+              {x.nama}
+            </a>
+          ))
+        }
       </div>
     </div>
   </body>
