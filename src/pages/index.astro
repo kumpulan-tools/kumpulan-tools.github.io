@@ -7,15 +7,23 @@ let aplikasi = [
     nama: "Penanda Halaman",
     slug: "penanda-halaman",
   },
+  {
+    nama: "Belajar Automa",
+    slug: "belajar-automa",
+  },
+  {
+    nama: "Belajar Excel",
+    slug: "belajar-excel",
+  },
 ];
 ---
 
 <html lang="en">
   <head>
-    <Head></Head>
+    <Head />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    
+
     <title>Kumpulan Tools</title>
   </head>
   <body>
@@ -34,11 +42,13 @@ let aplikasi = [
       <h2 class="text-3xl font-bold">Aplikasi yang Kubuat</h2>
       <div class="grid mt-6 grid-cols-4 gap-4">
         {
-          aplikasi.map((x) => (
-            <a class="btn normal-case" href={`/aplikasi/${x.slug}`}>
-              {x.nama}
-            </a>
-          ))
+          aplikasi
+            .sort((a, b) => (a.nama > b.nama ? 1 : -1))
+            .map((x) => (
+              <a class="btn normal-case" href={`/aplikasi/${x.slug}`}>
+                {x.nama}
+              </a>
+            ))
         }
       </div>
     </div>
