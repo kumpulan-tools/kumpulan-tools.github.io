@@ -1,0 +1,24 @@
+created: 20231002012201678
+modified: 20231002013437224
+published_date: 20231002093437224
+tags: Published
+title: 01. Apa yang Dimaksud dengan Excel?
+type: text/vnd.tiddlywiki
+
+Excel adalah perangkat lunak yang dibuat oleh Microsoft, tugasnya adalah untuk mengolah angka. Selain Microsoft Excel, ada juga aplikasi serupa yaitu WPS Spreadsheet, Google Spreadsheet, dan Libre Office Spreadsheet.
+
+Berikut ini adalah contoh tampilan Microsoft Excel:
+
+[img[tampilan excel image.png]]
+
+!! Tombol Menu
+
+Yaitu File, Home, Insert, Page Layout, References, Data, Review, View, dan Help. Berfungsi untuk mengolah tampilan tabel kita dan berfungsi untuk menambahkan behavior (action) tabel kita.
+
+!! Lembar Kerja
+
+Pada lembar kerja Excel, terdapat tampilan kolom (A, B, C, D, E, F, ...) dan baris (1, 2, 3, 4, 5, ...). Setiap lokasi di suatu sel disimbolkan dengan [kolom][baris]. Contoh: A1, artinya kolom A dan baris 1.
+
+Kalau ini, berarti posisi sel aktif berada di kolom B dan baris 4:
+
+[img[posisi sel image.png]]
