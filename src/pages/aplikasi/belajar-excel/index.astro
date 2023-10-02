@@ -1,0 +1,29 @@
+---
+import Head from "../../../sisipan/head.astro";
+import data from "../../../wiki/belajar-excel/tiddlers/published.json";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Head />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Excel</title>
+  </head>
+  <body>
+    <div class="p-3">
+      <h1>Belajar Excel</h1>
+      <div class="grid grid-cols-10 gap-3">
+        <div class="col-span-2">
+          {
+            data
+              .sort((a, b) => (a.title > b.title ? 1 : -1))
+              .map((x) => <a>{x.title}</a>)
+          }
+        </div>
+        <div class="col-span-8"></div>
+      </div>
+    </div>
+  </body>
+</html>
