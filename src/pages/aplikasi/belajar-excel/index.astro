@@ -17,7 +17,11 @@ import data from "../../../wiki/belajar-excel/tiddlers/published.json";
       {
         data
           .sort((a, b) => (a.title > b.title ? 1 : -1))
-          .map((x) => <a class="btn mr-3 mb-3">{x.title}</a>)
+          .map((x) => (
+            <a href={`baca/${x.slug}`} class="btn mr-3 mb-3">
+              {x.title}
+            </a>
+          ))
       }
     </div>
   </body>
