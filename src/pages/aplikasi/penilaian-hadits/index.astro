@@ -1,0 +1,21 @@
+---
+import Head from "../../../sisipan/head.astro";
+import Penilaian from "./penilaian.svelte";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Head />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penilaian Hadits</title>
+  </head>
+  <body>
+    <h1 class="bg-info text-white p-2">Penilaian Hadits Arbain</h1>
+    <div class="p-4">
+      <Penilaian client:only />
+      <a href="/" class="btn mt-4">Other Apps</a>
+    </div>
+  </body>
+</html>
