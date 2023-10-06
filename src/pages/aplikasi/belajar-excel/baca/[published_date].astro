@@ -1,0 +1,29 @@
+---
+import data from "../../../../wiki/belajar-excel/tiddlers/published.json";
+import Head from "../../../../sisipan/head.astro";
+
+export async function getStaticPaths() {
+  return data.map((x) => ({
+    params: {
+      published_date: x.published_date,
+    },
+    props: {
+      title: x.title,
+      text: x.text,
+    },
+  }));
+}
+
+const { title, text } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Head />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title.split(". ")[1]}</title>
+  </head>
+  <body> </body>
+</html>

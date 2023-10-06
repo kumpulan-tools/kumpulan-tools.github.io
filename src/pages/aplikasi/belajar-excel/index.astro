@@ -3,7 +3,7 @@ import Head from "../../../sisipan/head.astro";
 import data from "../../../wiki/belajar-excel/tiddlers/published.json";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <Head />
@@ -18,8 +18,11 @@ import data from "../../../wiki/belajar-excel/tiddlers/published.json";
         data
           .sort((a, b) => (a.title > b.title ? 1 : -1))
           .map((x) => (
-            <a href={`baca/${x.slug}`} class="btn mr-3 mb-3">
-              {x.title}
+            <a
+              href={`/aplikasi/belajar-excel/baca/${x.published_date}`}
+              class="btn mr-3 mb-3"
+            >
+              {x.title.split(". ")[1]}
             </a>
           ))
       }
