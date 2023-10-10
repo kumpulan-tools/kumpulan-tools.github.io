@@ -1,0 +1,12 @@
+created: 20231010222724204
+modified: 20231010222837279
+published_date: 20231011062837277
+tags: Published
+title: Set Wallpaper
+type: text/vnd.tiddlywiki
+
+Add this code in your JavaScript:
+
+```javascript
+Andro.set_wallpaper("image.jpg")
+```
