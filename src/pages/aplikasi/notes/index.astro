@@ -1,0 +1,27 @@
+---
+import Head from "../../../sisipan/head.astro";
+import Notes from "./notes.svelte";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <Head />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes</title>
+  </head>
+  <body>
+    <div class="p-3">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Write Your Notes Here :</span>
+        </label>
+        <Notes client:only />
+      </div>
+      <div class="pt-3">
+        <a href="/" class="btn">Other Apps</a>
+      </div>
+    </div>
+  </body>
+</html>
