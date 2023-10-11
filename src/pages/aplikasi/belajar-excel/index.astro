@@ -3,7 +3,7 @@ import Head from "../../../sisipan/head.astro";
 import data from "../../../wiki/belajar-excel/tiddlers/published.json";
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <Head />
@@ -22,7 +22,7 @@ import data from "../../../wiki/belajar-excel/tiddlers/published.json";
               href={`/aplikasi/belajar-excel/baca/${x.published_date}`}
               class="btn mr-3 mb-3"
             >
-              {x.title.split(". ")[1]}
+              {x.title.replace(/^0+/, "")}
             </a>
           ))
       }

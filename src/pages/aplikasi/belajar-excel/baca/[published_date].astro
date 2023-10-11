@@ -42,7 +42,7 @@ const { title, text } = Astro.props;
                       }
                       href={`/aplikasi/belajar-excel/baca/${x.published_date}`}
                     >
-                      {x.title.split(". ")[1]}
+                      {x.title.replace(/^0+/, "")}
                     </a>
                   </li>
                 ))
@@ -53,7 +53,10 @@ const { title, text } = Astro.props;
           </ul>
         </div>
         <div class="col-span-8 overflow-auto h-[calc(100vh-32px)]">
-          <div class="prose max-w-full" set:html={text} />
+          <div class="prose max-w-full">
+            <h1>{title.replace(/^0+/, "")}</h1>
+            <Fragment set:html={text} />
+          </div>
         </div>
       </div>
     </div>
